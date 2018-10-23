@@ -13,11 +13,11 @@ public class CustomReader {
         bufferedReader = new BufferedReader(fileReader);
     }
 
-    public String nextLine() {
+    public String nextLine() throws IOException {
         return bufferedReader.readLine();
     }
 
-    public void close() {
+    public void close() throws IOException {
         bufferedReader.close();
     }
 }

@@ -16,10 +16,11 @@ public class ParsedFile {
             values.add(value);
             content.put(key, values);
         } else {
-            List<String[]> values = Collections.singletonList(value);
+            List<String[]> values = new ArrayList<>();
+            values.add(value);
             content.put(key, values);
         }
-        empty = new String[value].length;
+        empty = new String[value.length-1];
     }
 
     public Set<String> getKeys() {
